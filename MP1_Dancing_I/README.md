@@ -13,13 +13,16 @@ The program is tested with Xcode under OSX.
 
 ## Program Instructions
 
-1. ** How to Build **. You need have OpenGL and GLUT to get this work. For setting up the environment, please refer to [this link](http://web.eecs.umich.edu/~sugih/courses/eecs487/glut-howto/).
+#### How to Build 
+You need have OpenGL and GLUT to get this work. For setting up the environment, please refer to [this link](http://web.eecs.umich.edu/~sugih/courses/eecs487/glut-howto/).
 Other than these two libraries, three files needed include:
         main.cpp
         dancing_I.cpp
         dancing_I.hpp
-2. ** How to Run **. An unix excutable program is available in the folder which you can directly open. Otherwise, it is also possible to build the source code from project file.
-3. ** How to Interact **. Keyboard is used for interacting with the program. 
+#### How to Run
+An unix excutable program is available in the folder which you can directly open. Otherwise, it is also possible to build the source code from project file.
+#### How to Interact
+Keyboard is used for interacting with the program. 
 There are five keys availble, with following instructions:
 
     <<<<<<<<<< Keyboard Help >>>>>>>>>>>
