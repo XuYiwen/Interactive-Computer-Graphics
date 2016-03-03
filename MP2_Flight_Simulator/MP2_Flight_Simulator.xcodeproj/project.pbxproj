@@ -1,0 +1,270 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		DB3CF73F1C874C6100160C39 /* OpenGL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DB3CF73E1C874C6100160C39 /* OpenGL.framework */; };
+		DB3CF7411C874C6700160C39 /* GLUT.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DB3CF7401C874C6700160C39 /* GLUT.framework */; };
+		DB3CF7431C8750F000160C39 /* mountain.cpp in Sources */ = {isa = PBXBuildFile; fileRef = DB3CF7421C8750F000160C39 /* mountain.cpp */; };
+		DB3CF74E1C8796B500160C39 /* model.cpp in Sources */ = {isa = PBXBuildFile; fileRef = DB3CF74C1C8796B500160C39 /* model.cpp */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		DB3CF7321C874C4E00160C39 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = /usr/share/man/man1/;
+			dstSubfolderSpec = 0;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 1;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		DB3CF7341C874C4E00160C39 /* MP2_Flight_Simulator */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = MP2_Flight_Simulator; sourceTree = BUILT_PRODUCTS_DIR; };
+		DB3CF73E1C874C6100160C39 /* OpenGL.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGL.framework; path = System/Library/Frameworks/OpenGL.framework; sourceTree = SDKROOT; };
+		DB3CF7401C874C6700160C39 /* GLUT.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GLUT.framework; path = System/Library/Frameworks/GLUT.framework; sourceTree = SDKROOT; };
+		DB3CF7421C8750F000160C39 /* mountain.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = mountain.cpp; sourceTree = "<group>"; };
+		DB3CF74C1C8796B500160C39 /* model.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = model.cpp; sourceTree = "<group>"; };
+		DB3CF74D1C8796B500160C39 /* model.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = model.hpp; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		DB3CF7311C874C4E00160C39 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DB3CF7411C874C6700160C39 /* GLUT.framework in Frameworks */,
+				DB3CF73F1C874C6100160C39 /* OpenGL.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		DB3CF72B1C874C4E00160C39 = {
+			isa = PBXGroup;
+			children = (
+				DB3CF7401C874C6700160C39 /* GLUT.framework */,
+				DB3CF73E1C874C6100160C39 /* OpenGL.framework */,
+				DB3CF7351C874C4E00160C39 /* Products */,
+				DB3CF7361C874C4E00160C39 /* src */,
+				DB3CF74F1C87977400160C39 /* header */,
+			);
+			sourceTree = "<group>";
+		};
+		DB3CF7351C874C4E00160C39 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				DB3CF7341C874C4E00160C39 /* MP2_Flight_Simulator */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		DB3CF7361C874C4E00160C39 /* src */ = {
+			isa = PBXGroup;
+			children = (
+				DB3CF7421C8750F000160C39 /* mountain.cpp */,
+				DB3CF74C1C8796B500160C39 /* model.cpp */,
+			);
+			name = src;
+			path = MP2_Flight_Simulator;
+			sourceTree = "<group>";
+		};
+		DB3CF74F1C87977400160C39 /* header */ = {
+			isa = PBXGroup;
+			children = (
+				DB3CF74D1C8796B500160C39 /* model.hpp */,
+			);
+			name = header;
+			path = MP2_Flight_Simulator;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		DB3CF7331C874C4E00160C39 /* MP2_Flight_Simulator */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = DB3CF73B1C874C4E00160C39 /* Build configuration list for PBXNativeTarget "MP2_Flight_Simulator" */;
+			buildPhases = (
+				DB3CF7301C874C4E00160C39 /* Sources */,
+				DB3CF7311C874C4E00160C39 /* Frameworks */,
+				DB3CF7321C874C4E00160C39 /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = MP2_Flight_Simulator;
+			productName = MP2_Flight_Simulator;
+			productReference = DB3CF7341C874C4E00160C39 /* MP2_Flight_Simulator */;
+			productType = "com.apple.product-type.tool";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		DB3CF72C1C874C4E00160C39 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0720;
+				ORGANIZATIONNAME = evx;
+				TargetAttributes = {
+					DB3CF7331C874C4E00160C39 = {
+						CreatedOnToolsVersion = 7.2.1;
+					};
+				};
+			};
+			buildConfigurationList = DB3CF72F1C874C4E00160C39 /* Build configuration list for PBXProject "MP2_Flight_Simulator" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = DB3CF72B1C874C4E00160C39;
+			productRefGroup = DB3CF7351C874C4E00160C39 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				DB3CF7331C874C4E00160C39 /* MP2_Flight_Simulator */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXSourcesBuildPhase section */
+		DB3CF7301C874C4E00160C39 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DB3CF7431C8750F000160C39 /* mountain.cpp in Sources */,
+				DB3CF74E1C8796B500160C39 /* model.cpp in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		DB3CF7391C874C4E00160C39 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.11;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		DB3CF73A1C874C4E00160C39 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.11;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		DB3CF73C1C874C4E00160C39 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				OTHER_CFLAGS = "-Wno-deprecated";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		DB3CF73D1C874C4E00160C39 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				OTHER_CFLAGS = "-Wno-deprecated";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		DB3CF72F1C874C4E00160C39 /* Build configuration list for PBXProject "MP2_Flight_Simulator" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DB3CF7391C874C4E00160C39 /* Debug */,
+				DB3CF73A1C874C4E00160C39 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		DB3CF73B1C874C4E00160C39 /* Build configuration list for PBXNativeTarget "MP2_Flight_Simulator" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DB3CF73C1C874C4E00160C39 /* Debug */,
+				DB3CF73D1C874C4E00160C39 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = DB3CF72C1C874C4E00160C39 /* Project object */;
+}
