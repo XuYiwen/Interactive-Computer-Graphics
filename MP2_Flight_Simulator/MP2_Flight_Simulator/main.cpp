@@ -14,7 +14,7 @@ Model model;
 void
 init(void){
     // Load Shader
-    GLuint program = InitShader( "v_shader.glsl");
+    GLuint program = InitShader( "v_shader.glsl","f_shader.glsl");
     glUseProgram(program);
     
     GLfloat white[] = {1.0,1.0,1.0,1.0};
@@ -30,6 +30,9 @@ init(void){
     
     glClearColor (0.5, 0.5, 1.0, 0.0);
     glEnable(GL_DEPTH_TEST);
+    
+//    model.drawMountain();
+//    model.drawSea();
 }
 
 void display(void)
@@ -42,7 +45,7 @@ void display(void)
     glLoadIdentity ();
     gluLookAt (0.5, 0.0, 0.25, 0.0, 0.0, 0.0, 0.0, 0.0, 1.0);
     glRotatef(angle, 0.0, 0.0, 1.0);
-//    glTranslatef (-0.5, -0.5, 0.0); 
+    glTranslatef (-0.5, -0.5, 0.0); 
     
     model.drawMountain();
     model.drawSea();
@@ -93,6 +96,7 @@ int main(int argc, char** argv)
     glutInitWindowSize (500, 500);
     glutInitWindowPosition (100, 100);
     glutCreateWindow ((const char*)"MP2 - Flight Simulator");
+    
     init ();
     glutDisplayFunc(display);
     glutReshapeFunc(reshape);

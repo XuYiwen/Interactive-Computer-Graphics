@@ -17,6 +17,6 @@
 static char* readShader(const char* shaderFile);
 
 // Create a GLSL program object from vertex and fragment shader files
-GLuint InitShader(const char* vShaderFile);
+GLuint InitShader(const char* vShaderFile, const char* fShaderFile);
 
 #endif /* Shader_hpp */
