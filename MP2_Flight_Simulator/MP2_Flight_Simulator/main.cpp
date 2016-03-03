@@ -11,8 +11,12 @@
 
 Model model;
 
-void init(void)
-{
+void
+init(void){
+    // Load Shader
+    GLuint program = InitShader( "v_shader.glsl");
+    glUseProgram(program);
+    
     GLfloat white[] = {1.0,1.0,1.0,1.0};
     GLfloat lpos[] = {0.0,1.0,0.0,0.0};
     
@@ -34,11 +38,11 @@ void display(void)
     
     glClear (GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
     glColor3f (1.0, 1.0, 1.0);
-    glLoadIdentity ();             /* clear the matrix */
-    /* viewing transformation  */
+    
+    glLoadIdentity ();
     gluLookAt (0.5, 0.0, 0.25, 0.0, 0.0, 0.0, 0.0, 0.0, 1.0);
     glRotatef(angle, 0.0, 0.0, 1.0);
-    glTranslatef (-0.5, -0.5, 0.0);      /* modeling transformation */
+//    glTranslatef (-0.5, -0.5, 0.0); 
     
     model.drawMountain();
     model.drawSea();

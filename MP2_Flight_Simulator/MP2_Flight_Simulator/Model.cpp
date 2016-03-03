@@ -8,17 +8,18 @@
 
 #include "Model.hpp"
 
-int Model::seed(float x, float y) {
+int
+Model::seed(float x, float y){
     static int a = 1588635695, b = 1117695901;
     int xi = *(int *)&x;
     int yi = *(int *)&y;
     return ((xi * a) % b) - ((yi * b) % a);
 }
 
-void Model::mountain(float x0, float y0, float z0,
-                     float x1, float y1, float z1,
-                     float x2, float y2, float z2, float s)
-{
+void
+Model::mountain(float x0, float y0, float z0,
+                float x1, float y1, float z1,
+                float x2, float y2, float z2, float s){
     float x01,y01,z01,x12,y12,z12,x20,y20,z20;
     
     if (s < polysize) {
@@ -83,7 +84,8 @@ void Model::mountain(float x0, float y0, float z0,
     mountain(x01,y01,z01,x12,y12,z12,x20,y20,z20,s);
 }
 
-void Model::drawMountain(){
+void
+Model::drawMountain(){
     glMaterialfv(GL_FRONT_AND_BACK, GL_AMBIENT, tanamb);
     glMaterialfv(GL_FRONT_AND_BACK, GL_DIFFUSE, tandiff);
     glMaterialfv(GL_FRONT_AND_BACK, GL_SPECULAR, tandiff);
@@ -92,7 +94,9 @@ void Model::drawMountain(){
     mountain(0.0,0.0,0.0, 1.0,0.0,0.0, 0.0,1.0,0.0, 1.0);
     mountain(1.0,1.0,0.0, 0.0,1.0,0.0, 1.0,0.0,0.0, 1.0);
 }
-void Model::drawSea(){
+
+void
+Model::drawSea(){
     glMaterialfv(GL_FRONT_AND_BACK, GL_AMBIENT, seaamb);
     glMaterialfv(GL_FRONT_AND_BACK, GL_DIFFUSE, seadiff);
     glMaterialfv(GL_FRONT_AND_BACK, GL_SPECULAR, seaspec);
