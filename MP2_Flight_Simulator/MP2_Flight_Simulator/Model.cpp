@@ -6,7 +6,7 @@
 //  Copyright © 2016 evx. All rights reserved.
 //
 
-#include "model.hpp"
+#include "Model.hpp"
 
 int Model::seed(float x, float y) {
     static int a = 1588635695, b = 1117695901;
@@ -16,8 +16,8 @@ int Model::seed(float x, float y) {
 }
 
 void Model::mountain(float x0, float y0, float z0,
-              float x1, float y1, float z1,
-              float x2, float y2, float z2, float s)
+                     float x1, float y1, float z1,
+                     float x2, float y2, float z2, float s)
 {
     float x01,y01,z01,x12,y12,z12,x20,y20,z20;
     

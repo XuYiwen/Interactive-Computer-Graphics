@@ -7,10 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C8BB38141C87EB94001361CE /* Model.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C8BB38131C87EB94001361CE /* Model.cpp */; };
+		C8BB38171C87EBCD001361CE /* Shader.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C8BB38151C87EBCD001361CE /* Shader.cpp */; };
+		C8BB38191C87F0CE001361CE /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C8BB38181C87F0CE001361CE /* main.cpp */; };
 		DB3CF73F1C874C6100160C39 /* OpenGL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DB3CF73E1C874C6100160C39 /* OpenGL.framework */; };
 		DB3CF7411C874C6700160C39 /* GLUT.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DB3CF7401C874C6700160C39 /* GLUT.framework */; };
-		DB3CF7431C8750F000160C39 /* mountain.cpp in Sources */ = {isa = PBXBuildFile; fileRef = DB3CF7421C8750F000160C39 /* mountain.cpp */; };
-		DB3CF74E1C8796B500160C39 /* model.cpp in Sources */ = {isa = PBXBuildFile; fileRef = DB3CF74C1C8796B500160C39 /* model.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -26,12 +27,14 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		C8BB38131C87EB94001361CE /* Model.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Model.cpp; sourceTree = "<group>"; };
+		C8BB38151C87EBCD001361CE /* Shader.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Shader.cpp; sourceTree = "<group>"; };
+		C8BB38161C87EBCD001361CE /* Shader.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = Shader.hpp; sourceTree = "<group>"; };
+		C8BB38181C87F0CE001361CE /* main.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
 		DB3CF7341C874C4E00160C39 /* MP2_Flight_Simulator */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = MP2_Flight_Simulator; sourceTree = BUILT_PRODUCTS_DIR; };
 		DB3CF73E1C874C6100160C39 /* OpenGL.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGL.framework; path = System/Library/Frameworks/OpenGL.framework; sourceTree = SDKROOT; };
 		DB3CF7401C874C6700160C39 /* GLUT.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GLUT.framework; path = System/Library/Frameworks/GLUT.framework; sourceTree = SDKROOT; };
-		DB3CF7421C8750F000160C39 /* mountain.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = mountain.cpp; sourceTree = "<group>"; };
-		DB3CF74C1C8796B500160C39 /* model.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = model.cpp; sourceTree = "<group>"; };
-		DB3CF74D1C8796B500160C39 /* model.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = model.hpp; sourceTree = "<group>"; };
+		DB3CF74D1C8796B500160C39 /* Model.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = Model.hpp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -69,8 +72,9 @@
 		DB3CF7361C874C4E00160C39 /* src */ = {
 			isa = PBXGroup;
 			children = (
-				DB3CF7421C8750F000160C39 /* mountain.cpp */,
-				DB3CF74C1C8796B500160C39 /* model.cpp */,
+				C8BB38181C87F0CE001361CE /* main.cpp */,
+				C8BB38131C87EB94001361CE /* Model.cpp */,
+				C8BB38151C87EBCD001361CE /* Shader.cpp */,
 			);
 			name = src;
 			path = MP2_Flight_Simulator;
@@ -79,7 +83,8 @@
 		DB3CF74F1C87977400160C39 /* header */ = {
 			isa = PBXGroup;
 			children = (
-				DB3CF74D1C8796B500160C39 /* model.hpp */,
+				DB3CF74D1C8796B500160C39 /* Model.hpp */,
+				C8BB38161C87EBCD001361CE /* Shader.hpp */,
 			);
 			name = header;
 			path = MP2_Flight_Simulator;
@@ -141,8 +146,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DB3CF7431C8750F000160C39 /* mountain.cpp in Sources */,
-				DB3CF74E1C8796B500160C39 /* model.cpp in Sources */,
+				C8BB38171C87EBCD001361CE /* Shader.cpp in Sources */,
+				C8BB38141C87EB94001361CE /* Model.cpp in Sources */,
+				C8BB38191C87F0CE001361CE /* main.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -263,6 +269,7 @@
 				DB3CF73D1C874C4E00160C39 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
