@@ -3,7 +3,7 @@ varying vec3 v;
 void main (void)
 {
     vec3 L = normalize(gl_LightSource[0].position.xyz - v);
-    vec3 E = normalize(-v); // we are in Eye Coordinates, so EyePos is (0,0,0)
+    vec3 E = normalize(-v);
     vec3 R = normalize(-reflect(L,N));
     
     //calculate Ambient Term:

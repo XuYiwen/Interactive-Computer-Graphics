@@ -88,7 +88,7 @@ void
 Model::drawMountain(){
     glMaterialfv(GL_FRONT_AND_BACK, GL_AMBIENT, tanamb);
     glMaterialfv(GL_FRONT_AND_BACK, GL_DIFFUSE, tandiff);
-    glMaterialfv(GL_FRONT_AND_BACK, GL_SPECULAR, tandiff);
+    glMaterialfv(GL_FRONT_AND_BACK, GL_SPECULAR, tanspec);
     glMaterialf(GL_FRONT_AND_BACK, GL_SHININESS, 10.0);
     
     mountain(0.0,0.0,0.0, 1.0,0.0,0.0, 0.0,1.0,0.0, 1.0);
@@ -109,4 +109,18 @@ Model::drawSea(){
     glVertex3f(1.0,1.0,sealevel);
     glVertex3f(0.0,1.0,sealevel);
     glEnd();
+}
+
+void
+Model::drawLight(){
+    glEnable(GL_LIGHTING);
+    glEnable(GL_LIGHT0);
+    
+    glLightfv(GL_LIGHT0, GL_POSITION, lpos);
+    glLightfv(GL_LIGHT0, GL_AMBIENT, white);
+    glLightfv(GL_LIGHT0, GL_DIFFUSE, white);
+    glLightfv(GL_LIGHT0, GL_SPECULAR, white);
+    
+    glClearColor (0.5, 0.5, 1.0, 0.0);
+    glEnable(GL_DEPTH_TEST);
 }

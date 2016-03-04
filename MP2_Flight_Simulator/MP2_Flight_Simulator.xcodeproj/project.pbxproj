@@ -11,7 +11,8 @@
 		C8BB38191C87F0CE001361CE /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C8BB38181C87F0CE001361CE /* main.cpp */; };
 		DB3CF73F1C874C6100160C39 /* OpenGL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DB3CF73E1C874C6100160C39 /* OpenGL.framework */; };
 		DB3CF7411C874C6700160C39 /* GLUT.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DB3CF7401C874C6700160C39 /* GLUT.framework */; };
-		DBF813CF1C88A31D00E3E34D /* Shader.cpp in Sources */ = {isa = PBXBuildFile; fileRef = DBF813CD1C88A31D00E3E34D /* Shader.cpp */; };
+		DBF813D51C88D96500E3E34D /* Shader.cpp in Sources */ = {isa = PBXBuildFile; fileRef = DBF813D31C88D96500E3E34D /* Shader.cpp */; };
+		DBF813D81C88DDB500E3E34D /* Camera.cpp in Sources */ = {isa = PBXBuildFile; fileRef = DBF813D61C88DDB500E3E34D /* Camera.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -33,8 +34,10 @@
 		DB3CF73E1C874C6100160C39 /* OpenGL.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGL.framework; path = System/Library/Frameworks/OpenGL.framework; sourceTree = SDKROOT; };
 		DB3CF7401C874C6700160C39 /* GLUT.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GLUT.framework; path = System/Library/Frameworks/GLUT.framework; sourceTree = SDKROOT; };
 		DB3CF74D1C8796B500160C39 /* Model.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = Model.hpp; sourceTree = "<group>"; };
-		DBF813CD1C88A31D00E3E34D /* Shader.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Shader.cpp; sourceTree = "<group>"; };
-		DBF813CE1C88A31D00E3E34D /* Shader.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = Shader.hpp; sourceTree = "<group>"; };
+		DBF813D31C88D96500E3E34D /* Shader.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Shader.cpp; sourceTree = "<group>"; };
+		DBF813D41C88D96500E3E34D /* Shader.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = Shader.hpp; sourceTree = "<group>"; };
+		DBF813D61C88DDB500E3E34D /* Camera.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Camera.cpp; sourceTree = "<group>"; };
+		DBF813D71C88DDB500E3E34D /* Camera.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = Camera.hpp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -72,9 +75,10 @@
 		DB3CF7361C874C4E00160C39 /* src */ = {
 			isa = PBXGroup;
 			children = (
-				DBF813CD1C88A31D00E3E34D /* Shader.cpp */,
+				DBF813D31C88D96500E3E34D /* Shader.cpp */,
 				C8BB38181C87F0CE001361CE /* main.cpp */,
 				C8BB38131C87EB94001361CE /* Model.cpp */,
+				DBF813D61C88DDB500E3E34D /* Camera.cpp */,
 			);
 			name = src;
 			path = MP2_Flight_Simulator;
@@ -84,7 +88,8 @@
 			isa = PBXGroup;
 			children = (
 				DB3CF74D1C8796B500160C39 /* Model.hpp */,
-				DBF813CE1C88A31D00E3E34D /* Shader.hpp */,
+				DBF813D41C88D96500E3E34D /* Shader.hpp */,
+				DBF813D71C88DDB500E3E34D /* Camera.hpp */,
 			);
 			name = header;
 			path = MP2_Flight_Simulator;
@@ -146,8 +151,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DBF813D81C88DDB500E3E34D /* Camera.cpp in Sources */,
 				C8BB38141C87EB94001361CE /* Model.cpp in Sources */,
-				DBF813CF1C88A31D00E3E34D /* Shader.cpp in Sources */,
+				DBF813D51C88D96500E3E34D /* Shader.cpp in Sources */,
 				C8BB38191C87F0CE001361CE /* main.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
