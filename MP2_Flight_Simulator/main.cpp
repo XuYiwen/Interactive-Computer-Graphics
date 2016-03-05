@@ -10,8 +10,64 @@
 #include "Shader.hpp"
 #include "Camera.hpp"
 
-Model model;
+#include <istream>
+#include <string>
+#include <sstream>
+#define FONT GLUT_BITMAP_HELVETICA_12
+using namespace std;
+
+MountainSea model;
 Camera cam;
+string statStr;
+
+void helper(void){
+    using namespace std;
+    cout << "<<<<<<<<<<<<< Keyboard Help >>>>>>>>>>>>>"<< endl;
+    cout << "-----------------------------------------"<< endl;
+    cout << "+/- | Edit Sea Level                     "<< endl;
+    cout << "f/c | Edit Polygon Size                  "<< endl;
+    cout << "p   | Start / Pause Forward              "<< endl;
+    cout << "-----------------------------------------"<< endl;
+    cout << "[a/d] ROLL  |  [w/s] PITCH  | [q/e] YAW  "<< endl;
+    cout << "[UP/DOWN] Forward Speed                  "<< endl;
+    cout << "[LEFT/RIGHT] Rotate Speed                "<< endl;
+    cout << "-----------------------------------------"<< endl;
+    cout << "Esc | Quit                               "<< endl;
+}
+
+void curStat(void)
+{
+    // save state and form new state
+    glDisable(GL_TEXTURE_2D);
+    glDisable(GL_LIGHTING);
+    glMatrixMode(GL_PROJECTION);
+    glPushMatrix();
+    glLoadIdentity();
+    gluOrtho2D(0.0, GLUT_WINDOW_WIDTH, 0.0, GLUT_WINDOW_HEIGHT);
+    glMatrixMode(GL_MODELVIEW);
+    glPushMatrix();
+    glLoadIdentity();
+    
+    // display sentence
+    glRasterPos2i(1, GLUT_WINDOW_HEIGHT-5);
+    ostringstream stream;
+    stream << "Last Update | " << statStr;
+    string out = stream.str();
+    int length = (int)out.length();
+    for (int i = 0; i < length; i++)
+    {
+        glutBitmapCharacter(FONT, out[i]);
+    }
+    
+    // back to original state
+    glMatrixMode(GL_MODELVIEW);
+    glPopMatrix();
+    glMatrixMode(GL_PROJECTION);
+    glPopMatrix();
+    glEnable(GL_TEXTURE_2D);
+    glEnable(GL_LIGHTING);
+}
+
 
 void init(void){
     // Load Shader
@@ -26,7 +82,8 @@ void init(void){
                cam.up[0],       cam.up[1],      cam.up[2]);
     glScalef(5.0, 5.0, 5.0);
     glTranslatef(-0.5, -0.5, 0);
-
+    
+    helper();
 }
 
 void display(void)
@@ -36,9 +93,8 @@ void display(void)
     
     // display model
     cam.update();
-    model.drawLight();
-    model.drawMountain();
-    model.drawSea();
+    model.drawAll();
+    curStat();
     
     glutSwapBuffers();
     glFlush ();
@@ -54,72 +110,88 @@ void reshape (int w, int h)
     glMatrixMode (GL_MODELVIEW);
 }
 
+
 void keyboard(unsigned char key, int x, int y)
 {
     switch (key) {
         case '-':
             model.sealevel -= 0.01;
+            statStr = "Edit Sea Level";
             break;
         case '+':
         case '=':
             model.sealevel += 0.01;
+            statStr = "Edit Sea Level";
             break;
         case 'f':
         case 'F':
             model.polysize *= 0.5;
+            statStr = "Edit Polygon Size";
             break;
         case 'c':
         case 'C':
             model.polysize *= 2.0;
+            statStr = "Edit Polygon Size";
             break;
         case 'a':
         case 'A':
             cam.rotDir = ROLL_LEFT;
+            statStr = "Rolling";
             break;
         case 'd':
         case 'D':
             cam.rotDir = ROLL_RIGHT;
+            statStr = "Rolling";
             break;
         case 'w':
         case 'W':
             cam.rotDir = PITCH_LEFT;
+            statStr = "Pitching";
             break;
         case 's':
         case 'S':
             cam.rotDir = PITCH_RIGHT;
+            statStr = "Pitching";
             break;
         case 'q':
         case 'Q':
             cam.rotDir = YAW_LEFT;
+            statStr = "Yawing";
             break;
         case 'e':
         case 'E':
             cam.rotDir = YAW_RIGHT;
+            statStr = "Yawing";
             break;
     
         case 'p': // Pause Auto Forward
         case 'P':
             cam.fwdStat = (cam.fwdStat == MOVE)? PAUSE : MOVE;
+            statStr = "Stop or Pause";
             break;
         case 27: // ESC
             exit(0);
-            break;
+            break;          
     }
 }
 
 void arrowKeys(int key, int x, int y){
     switch (key) {
         case GLUT_KEY_LEFT:
-            cam.rotSpeed *= 1.2;
+            cam.rotSpeed -= 1.2;
+            statStr = "Decrease Rotate Speed";
             break;
         case GLUT_KEY_RIGHT:
-            cam.rotSpeed /= 1.2;
+            cam.rotSpeed *= 1.2;
+            statStr = "Increase Rotate Speed";
             break;
         case GLUT_KEY_UP:
             cam.fwdSpeed *= 1.2;
+            statStr = "Increase Forward Speed";
             break;
         case GLUT_KEY_DOWN:
             cam.fwdSpeed /= 1.2;
+            statStr = "Decrease Forward Speed";
             break;
     }
 }

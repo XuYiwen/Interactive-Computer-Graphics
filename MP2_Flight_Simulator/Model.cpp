@@ -1,5 +1,5 @@
 //
-//  model.cpp
+//  MountainSea.cpp
 //  MP2_Flight_Simulator
 //
 //  Created by XuYiwen on 3/2/16.
@@ -9,7 +9,7 @@
 #include "Model.hpp"
 
 int
-Model::seed(float x, float y){
+MountainSea::seed(float x, float y){
     static int a = 1588635695, b = 1117695901;
     int xi = *(int *)&x;
     int yi = *(int *)&y;
@@ -17,7 +17,7 @@ Model::seed(float x, float y){
 }
 
 void
-Model::mountain(float x0, float y0, float z0,
+MountainSea::mountain(float x0, float y0, float z0,
                 float x1, float y1, float z1,
                 float x2, float y2, float z2, float s){
     float x01,y01,z01,x12,y12,z12,x20,y20,z20;
@@ -83,9 +83,15 @@ Model::mountain(float x0, float y0, float z0,
     mountain(x2,y2,z2,x20,y20,z20,x12,y12,z12,s);
     mountain(x01,y01,z01,x12,y12,z12,x20,y20,z20,s);
 }
+void
+MountainSea::drawAll(){
+    drawLight();
+    drawMountain();
+    drawSea();
+}
 
 void
-Model::drawMountain(){
+MountainSea::drawMountain(){
     glMaterialfv(GL_FRONT_AND_BACK, GL_AMBIENT, tanamb);
     glMaterialfv(GL_FRONT_AND_BACK, GL_DIFFUSE, tandiff);
     glMaterialfv(GL_FRONT_AND_BACK, GL_SPECULAR, tanspec);
@@ -96,7 +102,7 @@ Model::drawMountain(){
 }
 
 void
-Model::drawSea(){
+MountainSea::drawSea(){
     glMaterialfv(GL_FRONT_AND_BACK, GL_AMBIENT, seaamb);
     glMaterialfv(GL_FRONT_AND_BACK, GL_DIFFUSE, seadiff);
     glMaterialfv(GL_FRONT_AND_BACK, GL_SPECULAR, seaspec);
@@ -112,7 +118,7 @@ Model::drawSea(){
 }
 
 void
-Model::drawLight(){
+MountainSea::drawLight(){
     glEnable(GL_LIGHTING);
     glEnable(GL_LIGHT0);
     

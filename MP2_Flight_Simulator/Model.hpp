@@ -14,7 +14,7 @@
 #include <stdlib.h>
 #include <math.h>
 
-class Model{
+class MountainSea{
 private:
     
     // Mountain Material properties
@@ -46,7 +46,12 @@ public:
     void drawMountain(void);
     void drawSea(void);
     void drawLight(void);
+    void drawAll(void);
     void makemountain(void);
+};
+
+class City{
+    
 };
 
 #endif /* model_hpp */
